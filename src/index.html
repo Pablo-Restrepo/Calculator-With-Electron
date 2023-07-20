@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="calculator">
+        <div class="display-container">
+            <div class="container">
+                <div class="problem">0</div>
+                <div class="result">0</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="button" onclick="clearDisplay()">AC</div>
+            <div class="button" onclick="deleteLastCharacter()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                    <path
+                        d="M25.5 12.75L17 21.25M17 12.75L25.5 21.25M28.3333 7.08333H12.75L2.83333 17L12.75 26.9167H28.3333C29.0848 26.9167 29.8054 26.6182 30.3368 26.0868C30.8682 25.5554 31.1667 24.8348 31.1667 24.0833V9.91667C31.1667 9.16522 30.8682 8.44455 30.3368 7.9132C29.8054 7.38184 29.0848 7.08333 28.3333 7.08333Z"
+                        stroke="#FF8E26" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+            <div class="button" onclick="appendNumber('%')">%</div>
+            <div class="button" onclick="appendNumber('/')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39" fill="none">
+                    <path
+                        d="M9.75 17.875H29.25C29.681 17.875 30.0943 18.0462 30.399 18.351C30.7038 18.6557 30.875 19.069 30.875 19.5C30.875 19.931 30.7038 20.3443 30.399 20.649C30.0943 20.9538 29.681 21.125 29.25 21.125H9.75C9.31902 21.125 8.9057 20.9538 8.60095 20.649C8.29621 20.3443 8.125 19.931 8.125 19.5C8.125 19.069 8.29621 18.6557 8.60095 18.351C8.9057 18.0462 9.31902 17.875 9.75 17.875ZM19.5033 6.5C18.6413 6.49914 17.8143 6.84072 17.2042 7.44961C16.5941 8.05849 16.2509 8.8848 16.25 9.74675C16.2491 10.6087 16.5907 11.4357 17.1996 12.0458C17.8085 12.6559 18.6348 12.9991 19.4967 13C20.3587 13.0009 21.1857 12.6593 21.7958 12.0504C22.4059 11.4415 22.7491 10.6152 22.75 9.75325C22.7509 8.8913 22.4093 8.0643 21.8004 7.4542C21.1915 6.8441 20.3652 6.50086 19.5033 6.5ZM19.5033 26C18.6413 25.9991 17.8143 26.3407 17.2042 26.9496C16.5941 27.5585 16.2509 28.3848 16.25 29.2467C16.2491 30.1087 16.5907 30.9357 17.1996 31.5458C17.8085 32.1559 18.6348 32.4991 19.4967 32.5C20.3587 32.5009 21.1857 32.1593 21.7958 31.5504C22.4059 30.9415 22.7491 30.1152 22.75 29.2532C22.7509 28.3913 22.4093 27.5643 21.8004 26.9542C21.1915 26.3441 20.3652 26.0009 19.5033 26Z"
+                        fill="#FF8E26" />
+                </svg>
+            </div>
+        </div>
+        <div class="row">
+            <div class="button" onclick="appendNumber(7)">7</div>
+            <div class="button" onclick="appendNumber(8)">8</div>
+            <div class="button" onclick="appendNumber(9)">9</div>
+            <div class="button" onclick="appendNumber('*')"><svg xmlns="http://www.w3.org/2000/svg" width="37"
+                    height="37" viewBox="0 0 37 37" fill="none">
+                    <line x1="10.683" y1="10.5415" x2="26.1771" y2="26.1602" stroke="#FF8E26" stroke-width="4"
+                        stroke-linecap="round" />
+                    <line x1="10.5997" y1="26.163" x2="26.118" y2="10.5686" stroke="#FF8E26" stroke-width="4"
+                        stroke-linecap="round" />
+                </svg>
+            </div>
+        </div>
+        <div class="row">
+            <div class="button" onclick="appendNumber(4)">4</div>
+            <div class="button" onclick="appendNumber(5)">5</div>
+            <div class="button" onclick="appendNumber(6)">6</div>
+            <div class="button" onclick="appendNumber('-')"><svg xmlns="http://www.w3.org/2000/svg" width="27"
+                    height="4" viewBox="0 0 27 4" fill="none">
+                    <line x1="2" y1="2" x2="25" y2="2" stroke="#FF8E26" stroke-width="4" stroke-linecap="round" />
+                </svg>
+            </div>
+        </div>
+        <div class="row">
+            <div class="button" onclick="appendNumber(1)">1</div>
+            <div class="button" onclick="appendNumber(2)">2</div>
+            <div class="button" onclick="appendNumber(3)">3</div>
+            <div class="button" onclick="appendNumber('+')"><svg xmlns="http://www.w3.org/2000/svg" width="27"
+                    height="27" viewBox="0 0 27 27" fill="none">
+                    <line x1="2.00799" y1="12.9" x2="24.008" y2="12.988" stroke="#FF8E26" stroke-width="4"
+                        stroke-linecap="round" />
+                    <line x1="12.9951" y1="24.0049" x2="12.9413" y2="2.00488" stroke="#FF8E26" stroke-width="4"
+                        stroke-linecap="round" />
+                </svg>
+            </div>
+        </div>
+        <div class="row">
+            <div class="button" onclick="appendNumber(0)">0</div>
+            <div class="button" onclick="appendNumber('.')">.</div>
+            <div class="button" onclick="calculate()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39" fill="none">
+                    <path
+                        d="M8.9375 27.625C8.26042 27.625 7.68463 27.3878 7.21013 26.9133C6.73563 26.4388 6.49892 25.8635 6.5 25.1875C6.5 24.5104 6.73725 23.9346 7.21175 23.4601C7.68625 22.9856 8.2615 22.7489 8.9375 22.75H30.0625C30.7396 22.75 31.3154 22.9873 31.7899 23.4618C32.2644 23.9363 32.5011 24.5115 32.5 25.1875C32.5 25.8646 32.2628 26.4404 31.7883 26.9149C31.3138 27.3894 30.7385 27.6261 30.0625 27.625H8.9375ZM8.9375 16.25C8.26042 16.25 7.68463 16.0128 7.21013 15.5383C6.73563 15.0638 6.49892 14.4885 6.5 13.8125C6.5 13.1354 6.73725 12.5596 7.21175 12.0851C7.68625 11.6106 8.2615 11.3739 8.9375 11.375H30.0625C30.7396 11.375 31.3154 11.6123 31.7899 12.0868C32.2644 12.5613 32.5011 13.1365 32.5 13.8125C32.5 14.4896 32.2628 15.0654 31.7883 15.5399C31.3138 16.0144 30.7385 16.2511 30.0625 16.25H8.9375Z"
+                        fill="white" />
+                </svg>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
