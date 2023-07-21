@@ -20,7 +20,7 @@ Electron Calculator is a simple calculator app built with Electron, HTML, CSS, a
 
 2. Clone this repository to your local machine using the following command:
    ```bash
-   git clone https://github.com/yourusername/calculatorwithelectron.git
+   git clone https://github.com/Pablo736/CalculatorWithElectron
    ```
 3. Navigate to the project directory:
 
