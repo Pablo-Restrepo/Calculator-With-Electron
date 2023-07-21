@@ -10,9 +10,9 @@
 
 Electron Calculator is a simple calculator app built with Electron, HTML, CSS, and JavaScript. Supports basic arithmetic operations.
 
-<div style="text-align:center">
+<p align="center">
   <img src="docs/image.png" alt="Electron Calculator Demo" />
-</div>
+</p>
 
 ## Installation
 
