@@ -10,6 +10,7 @@ function createWindow() {
         height: 600,
         maxWidth: 500,
         maxHeight: 600,
+        icon: __dirname + '/img/icon.png',
         webPreferences: {
             nodeIntegration: true
         }
