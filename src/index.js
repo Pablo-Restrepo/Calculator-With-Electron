@@ -4,10 +4,12 @@ const electronReload = require('electron-reload');
 
 function createWindow() {
     const mainWindow = new BrowserWindow({
-        minHeight: 540,
-        minWidth: 330,
-        width: 330,
-        height: 580,
+        minWidth: 350,
+        minHeight: 625,
+        width: 350,
+        height: 600,
+        maxWidth: 500,
+        maxHeight: 600,
         webPreferences: {
             nodeIntegration: true
         }
